@@ -1,3 +1,26 @@
+/* styles.css */
 body {
-    background-color: rgb(0, 138, 189);
+    background-color: #b0ebff;
+}
+
+h1 {
+    color: #6143d9;
+    font-family: 'Baskerville', serif;
+    text-align: center;
+}
+
+a {
+    font-family: 'Futura', sans-serif;
+}
+
+button a {
+    color: #05b5a3;
+}
+
+.eliminar {
+    color: #fb3434e3;
+}
+
+.editar {
+    color: #4273c0;
 }
