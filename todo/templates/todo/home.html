@@ -1,36 +1,55 @@
+<img src="your-image-url.jpg" alt="Header Image" style="max-width: 100%; height: auto;"> 
 
-
-
-
+</header>
 
 {% extends 'todo/layout.html' %}
+
 {% block content %}
-       <h1> Lista de mis actividades</h1>
-        <ul>
-        {% for tarea in tareas %}
-            <li>{{ tarea }}</li>
-            <button><a href="{% url 'eliminar' tarea.id %}">Eliminar</a></button>
-            <button><a href="{% url 'editar' tarea.id %}">Editar</a></button>
-        {% endfor %}
+<body style="background-color: #b0ebff;">
 
-        <table class="table">
-            {% for tarea in tareas %} 
-           
-            <tbody>
-              <tr>
-            
-                <td>{{ tarea }}</td>
-                <td> <button><a href="{% url 'eliminar' tarea.id %}">Eliminar</a></button></td>
-                <td><button><a href="{% url 'editar' tarea.id %}">Editar</a></button></td>
-              </tr>
-             
-              
-            </tbody>
-            {% endfor %}  
-          </table>
+  <h1 style="color: #6143d9; font-family: 'Baskerville', serif; text-align: center;">LISTA DE MIS ACTIVIDADES</h1>
+  
+  <h2>
+    <button>
+      <a href="{% url 'agregar' %}" style="color: #05b5a3; font-family: 'Futura', sans-serif;">Agregar tarea aquí merengues</a>
+    </button>
+  </h2>
 
-        </ul>
+  <ul>
+    {% for tarea in tareas %}
+      <li>{{ tarea }}</li>
+      <button>
+        <a href="{% url 'eliminar' tarea.id %}" style="color: #fb3434e3; font-family: 'Futura', sans-serif;">Eliminar</a>
+      </button>
+      <button>
+        <a href="{% url 'editar' tarea.id %}" style="color: #4273c0; font-family: 'Futura', sans-serif;">Editar</a>
+      </button>
+    {% endfor %}
+  </ul>
+
+  <table class="table">
+    <tbody>
+      {% for tarea in tareas %}
+        <tr>
+          <td>{{ tarea }}</td>
+          <td>
+            <button>
+              <a href="{% url 'eliminar' tarea.id %}" style="color: #fb3434e3; font-family: 'Futura', sans-serif;">Eliminar</a>
+            </button>
+          </td>
+          <td>
+            <button>
+              <a href="{% url 'editar' tarea.id %}" style="color: #4273c0; font-family: 'Futura', sans-serif;">Editar</a>
+            </button>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
 {% endblock %}
+
+  <table c
 
 
  
